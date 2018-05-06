@@ -46,6 +46,8 @@ public:
      */
     HealthValue(unsigned int minValue = 0, unsigned int maxValue = 100, unsigned int value = 100);
 
+    ~HealthValue();
+
     /**
      * What is this current healths condition like
      * @return: HealthCondition
@@ -87,7 +89,7 @@ public:
      * @param minValue
      * @param maxValue
      * @param value
-     * @return: Returns HealthValue, if a health type already exists it will give you that one back, else a new one is created and sent back to you.
+     * @return: Returns HealthValue
      */
     HealthValue Add(HealthType healthType, unsigned int minValue, unsigned int maxValue, unsigned int value);
 

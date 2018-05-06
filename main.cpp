@@ -3,13 +3,14 @@
 
 int main() {
     Health h;
+    std::cout << "Health System Initialized" << std::endl;
 
-    std::cout << "Hello, World!" << std::endl;
+    h.Add(Vitality, 0, 10, 10);
+
     HealthValue * values = h.HealthByType(Vitality);
 
     if (values != nullptr) {
         std::cout << h << std::endl;
-        //std::cout << values->maxValue << std::endl;
     }
     else
     {

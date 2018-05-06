@@ -19,6 +19,10 @@ HealthCondition HealthValue::Condition() {
     return condition;
 }
 
+HealthValue::~HealthValue() {
+    std::cout << "destroying HealthValue" << std::endl;
+}
+
 /**
  * Health Constructor
  */
@@ -27,7 +31,7 @@ Health::Health() {
 }
 
 Health::~Health() {
-
+    std::cout << "destroying Health" << std::endl;
 }
 
 HealthValue Health::Add(HealthType healthType, unsigned int minValue, unsigned int maxValue, unsigned int value) {
