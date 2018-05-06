@@ -4,13 +4,7 @@
 
 #include "Health.h"
 
-/**
- * Health Value constructor
- * @param minValue: minimum value, default 0
- * @param maxValue: maximum value: default 100
- * @param value: health value, default maxValue
- */
-HealthValue::HealthValue(int minValue = 0, int maxValue = 100, int value = 100) {
+HealthValue::HealthValue(unsigned int minValue, unsigned int maxValue, unsigned int value) {
     this->minValue = minValue;
     this->maxValue = maxValue;
     this->value = value;
@@ -36,9 +30,9 @@ Health::~Health() {
 
 }
 
-HealthValue Health::Add(HealthType key, int minValue, int maxValue, int value) {
+HealthValue Health::Add(HealthType healthType, unsigned int minValue, unsigned int maxValue, unsigned int value) {
     HealthValue v = HealthValue(minValue, maxValue, value);
-    HealthValues[key] = v;
+    HealthValues[healthType] = v;
     return v;
 }
 
